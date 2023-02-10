@@ -6,14 +6,8 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                checkout scm
-                sh 'ls *'
+                echo 'test'
             }
         }       
     }
-    post {
-		always {
-			sh 'docker logout'
-		}
-	 }
-    }
+ }
